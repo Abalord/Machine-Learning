@@ -32,6 +32,13 @@ reg <- lm(Petal.Length ~ Sepal.Length,
           data = iris)
 summary(reg)
 
+# Plotando o model linear com o ggplot2
+install.packages("ggplot2")
+library(ggplot2)
+ggplot(iris, aes(x = Sepal.Length, y = Petal.Length)) + 
+geom_point() + stat_smooth(method = "lm")
+
+
 
 
 
